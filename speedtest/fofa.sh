@@ -14,7 +14,7 @@ i=0
 if [ $# -eq 0 ]; then
   echo "请选择城市："
  # echo "1. 上海电信（Shanghai_103）"
- echo "1. 辽宁（Liaoning_1）"
+ echo "16. 辽宁（Liaoning_1）"
  # echo "2. 北京联通（Beijing_liantong_145）"
 #  echo "3. 四川电信（Sichuan_333）"
 # echo "4. 浙江电信（Zhejiang_120）"
@@ -149,6 +149,14 @@ case $city_choice in
         url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
+    16)
+        city="Liaoning_1"
+        stream="rtp/239.253.93.111:2355"
+        channel_key="河北联通"
+        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
         for option in {1..15}; do
@@ -273,6 +281,8 @@ echo "甘肃电信,#genre#" >>zubo_fofa.txt
 cat txt/Gansu_105.txt >>zubo_fofa.txt
 echo "河北联通,#genre#" >>zubo_fofa.txt
 cat txt/Hebei_313.txt >>zubo_fofa.txt
+echo "辽宁,#genre#" >>zubo_fofa.txt
+cat txt/Liaoning_1 >>zubo_fofa.txt
 
 
 # for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
