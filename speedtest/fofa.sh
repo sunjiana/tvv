@@ -149,13 +149,6 @@ case $city_choice in
         url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    16)
-        city="Liaoning_1"
-        stream="rtp/239.253.93.111:2355"
-        channel_key="河北联通"
-        url_fofa=$(echo ""udpxy" && country="CN" && region="Hebei"  && protocol="http"" | base64)
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
 
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
